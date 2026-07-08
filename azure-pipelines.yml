@@ -32,11 +32,3 @@ steps:
     pathToPublish: $(Build.ArtifactStagingDirectory)
     artifactName: drop
 
-- task: AzureWebApp@1
-  displayName: Deploy to Azure App Service
-  inputs:
-    azureSubscription: rashinkafernando
-    appType: webApp
-    appName: mywebapp-demo
-    package: $(Build.ArtifactStagingDirectory)/**/*.zip
-
